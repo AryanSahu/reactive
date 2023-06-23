@@ -1,22 +1,25 @@
-# Getting Started
+public class BugExample {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 0;
+        int result = divideNumbers(num1, num2);
+        System.out.println("Result: " + result);
+    }
 
-### Reference Documentation
-For further reference, please consider the following sections:
+    public static int divideNumbers(int a, int b) {
+        // Bug 1: Division by zero is not handled
+        int result = a / b;
+        return result;
+    }
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* 
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.8/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.8/maven-plugin/reference/html/#build-image)
-* [Spring Reactive Web](https://docs.spring.io/spring-boot/docs/2.7.8/reference/htmlsingle/#web.reactive)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.8/reference/htmlsingle/#web)
-* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/2.7.8/reference/htmlsingle/#actuator)
+    public static void doSomething() {
+        // Bug 2: Unused method with no implementation
+    }
 
-### Guides
-The following guides illustrate how to use some features concretely:
+    public void nonStaticMethod() {
+        // Bug 3: Non-static method in a static context (main method)
+        System.out.println("Non-static method");
+    }
+}
 
-* [Building a Reactive RESTful Web Service](https://spring.io/guides/gs/reactive-rest-service/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Building a RESTful Web Service with Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/)
 
