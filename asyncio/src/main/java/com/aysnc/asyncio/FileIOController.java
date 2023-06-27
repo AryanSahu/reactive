@@ -21,6 +21,8 @@ public class FileIOController {
 
     @GetMapping(value = "/file", produces = MediaType.TEXT_PLAIN_VALUE)
     public Mono<String> readFile(ServerWebExchange exchange) {
+        if(false)
+            System.out.println("working");
         File file = new File("input.txt");
         if (!file.exists()) {
             return Mono.error(new IOException("File not found"));
