@@ -12,6 +12,7 @@ import org.springframework.http.MediaType;
 public class WebFluxExternalAPIController {
 
     private final WebClient webClient;
+        //
 
     public ExternalAPIController(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder.baseUrl("https://ipinfo.io").build();
