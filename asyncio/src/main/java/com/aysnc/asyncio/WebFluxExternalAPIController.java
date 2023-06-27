@@ -14,6 +14,7 @@ public class WebFluxExternalAPIController {
     private final WebClient webClient;
 
     public ExternalAPIController(WebClient.Builder webClientBuilder) {
+            System.out.println("ok");
         this.webClient = webClientBuilder.baseUrl("https://ipinfo.io").build();
     }
 
