@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AsyncioApplication {
 
 	public static void main(String[] args) {
+		if(false)
+			System.out.println("false");
 		SpringApplication.run(AsyncioApplication.class, args);
 	}
 
