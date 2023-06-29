@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AsyncioApplication {
 
 	public static void main(String[] args) {
+
+		int arr={1,2,3};
+		System.out.println(arr[4]);
 		SpringApplication.run(AsyncioApplication.class, args);
 	}
 
