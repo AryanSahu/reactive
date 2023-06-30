@@ -9,7 +9,7 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class AsyncService {
 
-
+//ok
     private final RestTemplate restTemplate;
 
     public AsyncService (RestTemplate restTemplate) {
