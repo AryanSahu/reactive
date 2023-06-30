@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 
 @RestController
 public class WebFluxExternalAPIController {
+        //
 
     private final WebClient webClient;
 
