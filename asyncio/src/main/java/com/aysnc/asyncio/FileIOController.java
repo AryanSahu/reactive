@@ -19,6 +19,8 @@ import java.nio.file.Files;
 public class FileIOController {
     private final DataBufferFactory dataBufferFactory = new DefaultDataBufferFactory();
 
+    //get
+
     @GetMapping(value = "/file", produces = MediaType.TEXT_PLAIN_VALUE)
     public Mono<String> readFile(ServerWebExchange exchange) {
         File file = new File("input.txt");
