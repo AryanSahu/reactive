@@ -21,8 +21,15 @@ public class FileIOController {
 
     @GetMapping(value = "/file", produces = MediaType.TEXT_PLAIN_VALUE)
     public Mono<String> readFile(ServerWebExchange exchange) {
+
+      String username = request.getParameter("username");
+      String query = "SELECT * FROM users WHERE username = '" + username + "'";
+
+
+        
         File file = new File("input.txt");
         if (!file.exists()) {
+            
             return Mono.error(new IOException("File not found"));
         }
         try {
